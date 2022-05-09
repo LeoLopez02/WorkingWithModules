@@ -1,10 +1,10 @@
-import { getSessions } from "./sessionRepository.js";
-import { sessionTemplate } from "./template.js";
+import getSessions from "./sessionRepository.js";
+import * as template from "./template.js";
 
 function render() {
   var list = document.querySelector("#sessions");
   if (!list) return;
-  list.innerHTML = sessionTemplate(data.listItems);
+  list.innerHTML = template.sessionTemplate(data.listItems);
 }
 
 var data = {
